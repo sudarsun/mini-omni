@@ -76,13 +76,14 @@ python3 server.py --ip '0.0.0.0' --port 60808
 NOTE: you need to run streamlit **locally** with PyAudio installed. For error: `ModuleNotFoundError: No module named 'utils.vad'`, please run `export PYTHONPATH=./` first.
 
 ```sh
+pip install -U setuptools
 pip install PyAudio==0.2.14
-API_URL=http://0.0.0.0:60808/chat streamlit run webui/omni_streamlit.py
+PYTHONPATH=. API_URL=http://0.0.0.0:60808/chat streamlit run webui/omni_streamlit.py
 ```
 
 - run gradio demo
 ```sh
-API_URL=http://0.0.0.0:60808/chat python3 webui/omni_gradio.py
+PYTHONPATH=. API_URL=http://0.0.0.0:60808/chat python3 webui/omni_gradio.py
 ```
 
 example:
